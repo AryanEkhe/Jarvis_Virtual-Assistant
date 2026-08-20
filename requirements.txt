@@ -1,0 +1,12 @@
+speech_recognition
+webbrowser
+pyttsx3
+musicLibrary
+requests
+pygame
+os
+yt_dlp
+vlc
+time
+threading
+tkinter
