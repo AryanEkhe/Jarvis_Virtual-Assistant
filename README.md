@@ -1,70 +1,83 @@
-**JARVIS - Voice Controlled Virtual Assistant**
-JARVIS is a lightweight, Python-powered voice assistant that listens for commands, fetches real-time updates, plays music, and leverages AI for intelligent web searches—all delivered through voice responses. Built entirely on free-tier APIs and open-source Python libraries.
+# JARVIS - Voice Controlled Virtual Assistant
 
-**Features**
-Voice Activation & Interaction: Listens via Google Speech Recognition and responds audibly using text-to-speech.
+Welcome to **JARVIS**! A lightweight, Python-powered voice assistant that listens for commands, fetches real-time updates, plays music, and leverages AI for intelligent web searches—all delivered through voice responses. Built entirely on free-tier APIs and open-source Python libraries.
+---
+## Table of Contents
 
-AI-Powered Web Search: Uses the Google Gemini API to answer complex queries and search for information online.
+* [Features](#features)
+* [Tech Stack & Dependencies](#tech-stack--dependencies)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Environment Setup](#environment-setup)
+* [Usage](#usage)
+* [Roadmap / Future Updates](#roadmap--future-updates)
 
-Real-time News Updates: Fetches and reads aloud the latest news headlines using NewsAPI.
+---
+## Features
 
-Music Playback: Plays songs stored locally or mapped via configured media URLs.
+* **Voice Activation & Interaction**: Listens via Google Speech Recognition and responds audibly using text-to-speech.
+* **AI-Powered Web Search**: Uses the Google Gemini API to answer complex queries and search for information online.
+* **Real-time News Updates**: Fetches and reads aloud the latest news headlines using NewsAPI.
+* **Music Playback**: Plays songs stored locally or mapped via configured media URLs in `musicLibrary.py`.
+* **Hands-Free Control**: Operates entirely through spoken commands after a wake-word trigger.
 
-Hands-Free Control: Operates entirely through spoken commands after a wake-word trigger.
+---
 
-**Tech Stack & Dependencies
-Language: Python 3.12.10**
+## Tech Stack & Dependencies
 
+* **Language**: Python 3.12.10
+* **API Services**: [NewsAPI](https://newsapi.org), [Google Gemini API](https://aistudio.google.com)
 
-API Services: NewsAPI, Google Gemini API 
+---
 
-**Getting Started**
-Prerequisites
+## Getting Started
+
+### Prerequisites
+
 Ensure you have Python installed on your system. You will also need free API keys for the following services:
+* [Google Gemini API Key](https://aistudio.google.com)
+* [NewsAPI Key](https://newsapi.org)
 
-Google Gemini API Key {https://aistudio.google.com}
+### Installation
 
-NewsAPI Key {https://newsapi.org}
+1. **Clone the repository:**
+   `git clone https://github.com/your-username/jarvis-virtual-assistant.git`
 
-Run the assistant:
+2. **Navigate into the project directory:**
+   `cd jarvis-virtual-assistant`
 
-**Terminal:**
-python main.py
-Boot Sequence:
-JARVIS will initialize with both text and voice confirmation:
+3. **Install required dependencies:**
+   `pip install -r requirements.txt`
 
-"JARVIS is booting up..."
+### Environment Setup
 
-**Wake Word & Voice Commands:
-Say "JARVIS" to trigger the listening state, then issue your command:**
+Insert your API keys into these slots inside your project file:
 
-Read News: read me the news"
+* `GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"`
+* `NEWS_API_KEY = "YOUR_NEWS_API_KEY"`
 
-Play Music: play {song name} (What you store with yt music video links in  musicLibrary.py file)"
+---
 
-Web Search: " search for quantum computing" / " tell me about..."
+## Usage
 
-Roadmap / Future Updates
-[ ] Online Song Searching: Integrating direct YouTube/online music search via the command interface (standalone script currently built, pending JARVIS integration).
+1. **Run the assistant:**
+   `python main.py`
 
-[ ] Expanded smart home or system management commands.
+2. **Boot Sequence:**  
+   JARVIS will initialize with both text and voice confirmation:
+   > *"JARVIS is booting up..."*
 
-[ ] Custom wake-word engine for offline detection.
+3. **Wake Word & Voice Commands:**  
+   Say **"JARVIS"** to trigger the listening state, then issue your command:
+   * **Read News**: *"read me the news"*
+   * **Play Music**: *"play {song name}"* (Plays YouTube music video links stored in `musicLibrary.py`)
+   * **Web Search**: *"search for quantum computing"* / *"tell me about..."*
 
+---
 
-**Installation**
-Clone the repository:
+## Roadmap / Future Updates
 
-**Type in terminal: **
-git clone https://github.com/your-username/jarvis-virtual-assistant.git
-
-**Install required Dependencies: **
-pip install -r requirements.txt
-
-**Environment Setup:**
-Insert your API keys into these slots
-
-GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"
-NEWS_API_KEY = "YOUR_NEWS_API_KEY"
-
-
+* [ ] **Online Song Searching**: Integrating direct YouTube/online music search via the command interface (standalone script currently built, pending JARVIS integration).
+* [ ] Expanded smart home or system management commands.
+* [ ] Custom wake-word engine for offline detection.
